@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+
+.title {
+  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+
+.data-description {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+
+footer {
+  margin-top: 20px;
+}

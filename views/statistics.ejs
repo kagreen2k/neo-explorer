@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <% include partials/head %>
+</head>
+<html>
+
+<body>
+    <% include partials/nav %>
+
+        <h1 class="title"><%= title %></h1>
+
+        <div class="neo-statistics">
+
+            <div>
+              <span class="data-description">Near Earth Object Count:</span>
+              <span class="data-value"><%= neoStatistics.near_earth_object_count %></span>
+            </div>
+            <div>
+              <span class="data-description">Close Approach Count:</span>
+              <span class="data-value"><%= neoStatistics.close_approach_count %></span>
+            </div>
+            <div>
+              <span class="data-description">Last Updated:</span>
+              <span class="data-value"><%= neoStatistics.last_updated %></span>
+            </div>
+            <div>
+              <span class="data-description">Source:</span>
+              <span class="data-value"><%= neoStatistics.source %></span>
+            </div>
+            <div>
+              <span class="data-description">NASA JPL URL:</span>
+              <span class="data-value"><%= neoStatistics.nasa_jpl_url %></span>
+            </div>
+
+            <% include partials/footer %>
+</body>
+
+</html>

@@ -19,28 +19,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var dashboard = require('./routes/dashboard');
-app.use('/', dashboard);
+var statistics = require('./routes/statistics');
+app.use('/', statistics);
 
 var about = require('./routes/about');
 app.use('/about', about);
 
-app.get('/neo-statistics', function(req, res) {
 
-  var Client = require('node-rest-client').Client;
-
-  var client = new Client();
-
-  // direct way
-  client.get("https://api.nasa.gov/neo/rest/v1/stats?api_key=DEMO_KEY", function (data, response) {
-      // parsed response body as js object
-      console.log(data);
-      // raw response
-      console.log(response);
-
-      res.json(data);
-  });
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
